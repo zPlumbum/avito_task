@@ -1,0 +1,42 @@
+GET http://localhost:8000/api/users/
+
+###
+
+GET http://localhost:8000/api/users/3/
+
+###
+
+POST http://localhost:8000/api/users/
+Content-Type: application/json
+
+{
+    "username": "user7",
+    "first_name": "Valera",
+    "last_name": "Beliy",
+    "user_balance": 300
+}
+
+###
+
+DELETE http://localhost:8000/api/users/8/
+
+###
+
+POST http://localhost:8000/user_balance/
+Content-Type: application/json
+
+{
+    "user_id": 3,
+    "value": 100
+}
+
+###
+
+POST http://localhost:8000/transaction/
+Content-Type: application/json
+
+{
+    "from_user_id": 3,
+    "to_user_id": 4,
+    "value": 20
+}
